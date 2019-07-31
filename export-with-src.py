@@ -28,7 +28,6 @@ _MENU_ID = 'Export'
 _ACTION_NAME = 'export-to-folder'
 
 EXPORT_DIR = os.path.join(os.path.expanduser('~'), 'exported-images')
-BASE_KEY = 'org.gnome.eog.plugins.export-with-src'
 
 
 class ExportPlugin(GObject.Object, Eog.WindowActivatable):
@@ -36,8 +35,6 @@ class ExportPlugin(GObject.Object, Eog.WindowActivatable):
 
     def __init__(self):
         GObject.Object.__init__(self)
-        self.settings = Gio.Settings.new(BASE_KEY)
-        self.selection_changed_handler_id = None
 
     @property
     def export_dir(self):
