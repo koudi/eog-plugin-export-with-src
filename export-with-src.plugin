@@ -1,0 +1,7 @@
+[Plugin]
+Loader=python3
+Module=export-with-src
+IAge=3
+Name=Export with src
+Icon=eog
+Description=Export the current image to a separate directory
